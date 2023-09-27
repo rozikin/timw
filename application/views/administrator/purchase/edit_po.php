@@ -139,8 +139,7 @@
                                         </div>
 
                                         <div class="form-group row mb-1">
-                                            <label for="reservationdatetime2" class="col-sm-4 col-form-label">Request in
-                                                House</label>
+                                            <label for="reservationdatetime2" class="col-sm-4 col-form-label">Request in House</label>
                                             <div class="col-sm-5">
                                                 <div class="form-group">
 

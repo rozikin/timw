@@ -24,8 +24,8 @@
             <div class="row">
                 <div class="col-12">
                     <?php if (validation_errors()) : ?>
-                        <div class="alert alert-danger" role="alert">
-                            <?= validation_errors(); ?></div>
+                    <div class="alert alert-danger" role="alert">
+                        <?= validation_errors(); ?></div>
                     <?php endif; ?>
                     <?= $this->session->flashdata('message'); ?>
 
@@ -39,20 +39,25 @@
                                 <thead>
                                     <tr>
                                         <th scope="col">#</th>
-                                        <th>Date</th>
+                                        <th>DATE</th>
 
-                                        <th>Code</th>
-                                        <th>Item</th>
-                                        <th>Color</th>
-                                        <th>Size</th>
+                                        <th>CODE</th>
+                                        <th>ITEM</th>
+                                        <th>COLOR</th>
+                                        <th>SIZE</th>
 
 
                                         <th>PO</th>
+                                        <th>MO</th>
 
-                                        <th>Qty</th>
+                                        <th>QTY</th>
+                                        <th>UOM</th>
+                                        <th>KURIR</th>
+                                        <th>EKSPEDISI</th>
 
-                                        <th>Surat Jalan</th>
-                                        <th>Supplier</th>
+                                        <th>NO. SJ</th>
+                                        <th>STYLE PORTION</th>
+                                        <th>SUPPLIER</th>
 
                                     </tr>
                                 </thead>
@@ -77,18 +82,18 @@
 
 
 <script>
-    $(document).ready(function() {
-        //call function show all product
-        table = $('#example6').DataTable({
-            "responsive": true,
-            "autoWidth": false,
-            "dom": 'Bfrtip',
-            "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"],
+$(document).ready(function() {
+    //call function show all product
+    table = $('#example6').DataTable({
+        "responsive": true,
+        "autoWidth": false,
+        "dom": 'Bfrtip',
+        "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"],
 
-            "ajax": {
-                url: '<?php echo site_url('Controller_Warehouse/get_data_material_in_all') ?>',
-                type: 'POST'
-            }
-        }).buttons().container().appendTo('#example6_wrapper .col-md-6:eq(0)');
-    });
+        "ajax": {
+            url: '<?php echo site_url('Controller_Warehouse/get_data_material_in_all') ?>',
+            type: 'POST'
+        }
+    }).buttons().container().appendTo('#example6_wrapper .col-md-6:eq(0)');
+});
 </script>

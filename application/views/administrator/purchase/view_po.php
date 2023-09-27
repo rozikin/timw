@@ -1,98 +1,98 @@
 <style>
-    .form-control-xs {
-        height: calc(1em + .375rem + 5px) !important;
-        padding: .125rem .25rem !important;
-        font-size: .75rem !important;
-        line-height: 1.5;
-        border-radius: .2rem;
-    }
+.form-control-xs {
+    height: calc(1em + .375rem + 5px) !important;
+    padding: .125rem .25rem !important;
+    font-size: .75rem !important;
+    line-height: 1.5;
+    border-radius: .2rem;
+}
 
-    .btn-xs {
-        height: calc(1em + .375rem + 3px) !important;
-        padding: .125rem .25rem !important;
-        font-size: .75rem !important;
-        line-height: 1.5;
-        border-radius: .2rem;
-    }
+.btn-xs {
+    height: calc(1em + .375rem + 3px) !important;
+    padding: .125rem .25rem !important;
+    font-size: .75rem !important;
+    line-height: 1.5;
+    border-radius: .2rem;
+}
 
-    .totals {
-        padding: 10px !important;
-
-
-
-    }
+.totals {
+    padding: 10px !important;
 
 
 
-    .table-up,
-    th,
-    td {
-        border: 1px solid grey;
-        padding: 5px;
-
-    }
+}
 
 
 
-    h1 {
-        font-size: 5em;
-        font-weight: 800;
-    }
+.table-up,
+th,
+td {
+    border: 1px solid grey;
+    padding: 5px;
 
-    .td-high {
-        border: 1px solid grey;
+}
 
-        padding-bottom: 120px;
-        padding-right: 50px;
-    }
 
-    .po-item {
-        background-color: #E0E0E0;
-    }
 
-    .table-up .th {
-        text-align: center;
-    }
+h1 {
+    font-size: 5em;
+    font-weight: 800;
+}
 
-    .timw {
-        margin-left: 80px !important;
-        margin-top: 20px !important;
-    }
+.td-high {
+    border: 1px solid grey;
 
-    .ttd1 {
-        margin-left: 30px !important;
-        margin-bottom: 100px !important;
-        margin-top: 20px !important;
+    padding-bottom: 120px;
+    padding-right: 50px;
+}
 
-    }
+.po-item {
+    background-color: #E0E0E0;
+}
 
-    /* th,
+.table-up .th {
+    text-align: center;
+}
+
+.timw {
+    margin-left: 80px !important;
+    margin-top: 20px !important;
+}
+
+.ttd1 {
+    margin-left: 30px !important;
+    margin-bottom: 100px !important;
+    margin-top: 20px !important;
+
+}
+
+/* th,
     td {
         border-bottom: 1px solid #ddd;
     } */
 
-    .ttd1-isi {
+.ttd1-isi {
 
-        margin-bottom: 100px !important;
+    margin-bottom: 100px !important;
 
-    }
+}
 
-    .ttd2 {
-        margin-left: 200px !important;
-        margin-bottom: 100px !important;
-        margin-top: 20px !important;
+.ttd2 {
+    margin-left: 200px !important;
+    margin-bottom: 100px !important;
+    margin-top: 20px !important;
 
-    }
+}
 
-    .ttd2-isi {
+.ttd2-isi {
 
-        margin-bottom: 100px !important;
+    margin-bottom: 100px !important;
 
-    }
+}
 
-    .full-height {
-        height: 100%;
-    }
+.full-height {
+    height: 100%;
+}
 </style>
 
 
@@ -256,7 +256,8 @@
                                                         <thead>
                                                             <tr class="po-item">
                                                                 <th class="text-center" width="2%">No</th>
-                                                                <th class="text-center" width="40%">Description of Goods</th>
+                                                                <th class="text-center" width="40%">Description of Goods
+                                                                </th>
                                                                 <th class="text-center" width="5%">Unit</th>
                                                                 <th class="text-center" width="15%">Qty Order</th>
                                                                 <th class="text-center" width="15%">Unit Price</th>
@@ -276,69 +277,69 @@
                                                             <?php foreach ($podetil as $p) : ?>
 
 
-                                                                <tr>
+                                                            <tr>
 
-                                                                    <td>
-                                                                        <?= $i; ?>
-                                                                    </td>
+                                                                <td>
+                                                                    <?= $i; ?>
+                                                                </td>
 
-                                                                    <td>
-                                                                        <?= $p['item_code'] ?> -
-                                                                        <?= $p['item_description'] ?> -
+                                                                <td>
+                                                                    <?= $p['item_code'] ?> -
+                                                                    <?= $p['item_description'] ?> -
 
-                                                                        <?= $p['size'] ?> -
+                                                                    <?= $p['size'] ?> -
 
-                                                                        <?= $p['color'] ?>
-                                                                    </td>
+                                                                    <?= $p['color'] ?>
+                                                                </td>
 
-                                                                    <td class="text-center">
-                                                                        <?= $p['unit'] ?>
-                                                                    </td>
-
-
-                                                                    <td class="text-center">
-                                                                        <?= number_format($p['qty'], 0, ',', '.') ?>
-                                                                    </td>
+                                                                <td class="text-center">
+                                                                    <?= $p['unit'] ?>
+                                                                </td>
 
 
+                                                                <td class="text-center">
+                                                                    <?= number_format($p['qty'], 0, ',', '.') ?>
+                                                                </td>
 
-                                                                    <td class="text-center">
-                                                                        <div>
-                                                                            <?php if ($po['remark'] === 'Local') {
+
+
+                                                                <td class="text-center">
+                                                                    <div>
+                                                                        <?php if ($po['remark'] === 'Local') {
                                                                                 echo 'IDR.     ';
                                                                             } else {
 
                                                                                 echo 'USD.     ';
                                                                             }
                                                                             ?>
-                                                                            <?= number_format($p['price'], 0, ',', '.') ?>
+                                                                        <?= number_format($p['price'], 0, ',', '.') ?>
 
-                                                                        </div>
-
-
+                                                                    </div>
 
 
-                                                                    </td>
-
-                                                                    <td class="text-right">
 
 
-                                                                        <?php if ($po['remark'] === 'Local') {
+                                                                </td>
+
+                                                                <td class="text-right">
+
+
+                                                                    <?php if ($po['remark'] === 'Local') {
                                                                             echo 'IDR.     ';
                                                                         } else {
 
                                                                             echo 'USD.     ';
                                                                         }
                                                                         ?>
-                                                                        <?= number_format($p['total_price'], 0, ',', '.') ?>
+                                                                    <?= number_format($p['total_price'], 0, ',', '.') ?>
 
 
-                                                                    </td>
+                                                                </td>
 
-                                                                </tr>
+                                                            </tr>
 
 
-                                                                <?php $i++; ?>
+                                                            <?php $i++; ?>
                                                             <?php endforeach; ?>
 
                                                         </tbody>
@@ -391,7 +392,8 @@
                                                                 </th>
                                                             </tr>
                                                             <tr>
-                                                                <th class="p-1 text-right" colspan="5"> Vat (<?= $po['vat']; ?>%)</th>
+                                                                <th class="p-1 text-right" colspan="5"> Vat
+                                                                    (<?= $po['vat']; ?>%)</th>
                                                                 <th class="p-1 text-right">
                                                                     <?php if ($po['remark'] === 'Local') {
                                                                         echo 'IDR.     ';
@@ -425,7 +427,8 @@
                                                                 </th>
                                                             </tr>
                                                             <tr>
-                                                                <th class="p-1 text-right" colspan="5">Purchase Amount</th>
+                                                                <th class="p-1 text-right" colspan="5">Purchase Amount
+                                                                </th>
                                                                 <th class="p-1 text-right" id="total">
                                                                     <?php if ($po['remark'] === 'Local') {
                                                                         echo 'IDR.     ';
@@ -465,10 +468,11 @@
                                         <div class="form-group">
                                             <label class="font-weight-bold">Note</label>
                                             </br>
+                                            <p><?= $po['note2'] ?></p>
+
                                             <p>
-                                                - Payment term is T/T 30 days after delivery
-                                                </br>
-                                                - Please send back after dully signed and stamped
+
+
                                                 </br>
                                                 - Goods to be delivered to the following address
                                                 </br>
@@ -479,8 +483,12 @@
                                                 Kec. Bawen Kab. Semarang, Jawa Tengah
                                                 </br>
 
-                                            <p><?= $po['note2'] ?></p>
-                                            </br>
+                                                - Tolerance quantity and amount : more or less 5 % allowed
+                                                </br>
+                                                - BTMU Rate : Rp. 14.650 /USD
+
+
+                                                </br>
                                         </div>
                                     </div>
 
@@ -512,7 +520,8 @@
                                                 <?= $po['approval']; ?>
 
                                             </div>
-                                            <hr style="width:50%;text-align:left;margin-left:0" class="border border-dark">
+                                            <hr style="width:50%;text-align:left;margin-left:0"
+                                                class="border border-dark">
                                             <div class="ml-5">President Director</div>
 
                                         </div>
@@ -534,7 +543,8 @@
                                                 <div class="text-white">0</div>
                                             </div>
 
-                                            <hr style="width:50%;text-align:left;margin-left:0" class="border border-dark">
+                                            <hr style="width:50%;text-align:left;margin-left:0"
+                                                class="border border-dark">
                                             <div class="font-weight-normal ml-5">
                                                 <?= $po['supplier_attention'] ?>
                                             </div>
@@ -584,7 +594,8 @@
 
                                         <a onclick="history.back(-1)" class="btn btn-success float-right">Back</a>
 
-                                        <button class="btn btn-sm btn-flat btn-primary" onclick="window.print()" type="button"><i class="fa fa-print"></i> Print</button>
+                                        <button class="btn btn-sm btn-flat btn-primary" onclick="window.print()"
+                                            type="button"><i class="fa fa-print"></i> Print</button>
                                         <!-- <a href="<?= base_url('Controller_Purchase/print_pdf/') . $po['id_po'] ?>"
                                             class="btn btn-primary float-right" style="margin-right: 5px;">Print</a> -->
                                     </div>
@@ -606,50 +617,50 @@
 
 
 <script>
-    $('#invoiceItem').find('tr').click(function() {
-        var aa = ($(this).index() + 1);
-        // alert('You clicked row ' + aa);
-        var ab = aa;
-        document.getElementById("cek").value = aa;
-    });
+$('#invoiceItem').find('tr').click(function() {
+    var aa = ($(this).index() + 1);
+    // alert('You clicked row ' + aa);
+    var ab = aa;
+    document.getElementById("cek").value = aa;
+});
 
 
-    $(document).ready(function() {
+$(document).ready(function() {
 
-        var a = $("#po_remark").val();
-        var aax = $("#cek").val();
-        var id_item = 'a';
-        var id_item_oks = id_item + aax;
+    var a = $("#po_remark").val();
+    var aax = $("#cek").val();
+    var id_item = 'a';
+    var id_item_oks = id_item + aax;
 
-        if (a == 'Local') {
-            $("#paraf2").show();
-            $("#paraf1").hide();
-        } else {
-            $("#paraf1").show();
-            $("#paraf2").hide();
-        }
-    });
+    if (a == 'Local') {
+        $("#paraf2").show();
+        $("#paraf1").hide();
+    } else {
+        $("#paraf1").show();
+        $("#paraf2").hide();
+    }
+});
 
 
 
-    $(function() {
-        $('#print').click(function(e) {
-            e.preventDefault();
-            var _h = $('head').clone()
-            var _p = $('#out_print').clone()
-            var _el = $('<div>')
-            _el.append(_h)
-            _el.append(_p)
-            var nw = window.open("", "", "width=1200,height=950")
-            nw.document.write(_el.html())
-            nw.document.close()
+$(function() {
+    $('#print').click(function(e) {
+        e.preventDefault();
+        var _h = $('head').clone()
+        var _p = $('#out_print').clone()
+        var _el = $('<div>')
+        _el.append(_h)
+        _el.append(_p)
+        var nw = window.open("", "", "width=1200,height=950")
+        nw.document.write(_el.html())
+        nw.document.close()
+        setTimeout(() => {
+            nw.print()
             setTimeout(() => {
-                nw.print()
-                setTimeout(() => {
 
-                    nw.close()
-                }, 300);
-            }, 200);
-        })
+                nw.close()
+            }, 300);
+        }, 200);
     })
+})
 </script>

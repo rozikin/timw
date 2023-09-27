@@ -229,11 +229,16 @@ class Controller_Warehouse extends CI_Controller
 
 
 			$row[] = $r->po_no;
+			$row[] = $r->trim_mo;
 
 			$row[] = $r->qty;
+			$row[] = $r->unit;
+			$row[] = $r->kurir;
+			$row[] = $r->ekspedisi;
 
 
 			$row[] = $r->no_sj;
+			$row[] = $r->trim_style;
 			$row[] =  $r->supplier_name;
 
 
@@ -1185,7 +1190,6 @@ class Controller_Warehouse extends CI_Controller
 		$this->session->set_flashdata('message', '<div class= "alert alert-success" role="alert">data edited</div>');
 		redirect('Controller_Warehouse/material_return');
 	}
-
 
 
 	function mutasi()
